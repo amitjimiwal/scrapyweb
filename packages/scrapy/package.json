@@ -1,21 +1,27 @@
 {
-  "name": "@notamit/scrapyweb",
+  "name": "ocgparser",
   "version": "1.0.2",
-  "description": "",
+  "description": "A simple package to extract Open Graph Protocol (ogp.me) metadata from a given URL that can be used to generate link previews.",
   "type": "module",
-  "main": "build/index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "start": " npx tsc && node build/index.js"
+    "start": " npx tsc && node dist/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "open graph protocol",
+    "ocg",
+    "parser",
+    "open graph parser",
+    "open graph"
+  ],
+  "author": "amitjimiwal",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.12.12",
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@types/puppeteer": "^7.0.4",
-    "puppeteer": "^22.10.0"
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0-rc.12"
   }
 }
