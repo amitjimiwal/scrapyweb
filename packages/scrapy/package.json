@@ -1,0 +1,21 @@
+{
+  "name": "@notamit/scrapyweb",
+  "version": "1.0.2",
+  "description": "",
+  "type": "module",
+  "main": "build/index.js",
+  "scripts": {
+    "start": " npx tsc && node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@types/puppeteer": "^7.0.4",
+    "puppeteer": "^22.10.0"
+  }
+}
