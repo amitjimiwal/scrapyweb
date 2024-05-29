@@ -25,7 +25,7 @@ To install `@notamit/ogpparser`
 ```
 
 ## 🧰  Usage
-``scroll-up-react` exports `<Progress>` component. When you use the `<Progress>` component, it will add a progress bar on the top of the page. You can customize the progress bar by passing props like `color1` `color2` and `size`.
+`@notamit/ogpparser` exports `parse` async function. It requires 1 argument, the URL of the page you want to extract metadata from. It returns a promise that resolves to an object containing the metadata.
 
 Inside your `.js/.ts` file, import the `parse` function and use it.
 ```js
