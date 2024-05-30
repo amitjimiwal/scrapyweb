@@ -13,6 +13,10 @@ app.use(
           origin: String(process.env.CORS_ORIGIN),
      })
 );
+//render uptime robot
+app.get("/ping", (req: Request, res: Response) => {
+     res.send("Server is running");
+});
 app.get('/scrape', async function (req: Request, res: Response, next: NextFunction) {
      let websiteUrl = req.query.url;
      if (!websiteUrl || !String(websiteUrl).startsWith('https://')) {
