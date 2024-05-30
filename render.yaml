@@ -1,0 +1,32 @@
+version: "1"
+services:
+    #BACKEND IAC
+  - type: web
+    runtime: node
+    name: scrapy-backend
+    repo: https://github.com/amitjimiwal/scrapyweb 
+    rootDir: apps/server
+    numInstances: 3  
+    branch: master      # Default: master
+    buildCommand: npx tsc
+    startCommand: npm run start
+    envVars:
+      - fromGroup: Scrapy # Add all variables from an environment group
+
+  #frontend IAC
+  - type: web
+    name: scrapy-frontend
+    runtime: static
+    repo: https://github.com/amitjimiwal/scrapyweb 
+    rootDir: apps/web
+    buildCommand: npm run build
+    staticPublishPath: ./dist
+    pullRequestPreviewsEnabled: true
+    routes:
+      - type: rewrite
+        source: /(.*)
+        destination: /
+    envVars:
+      - fromGroup: Scrapy  
+
+
